@@ -44,6 +44,7 @@
     "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Cyber AI", "Web Development", "Accessibility (WCAG)"]
   }
   </script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -58,10 +59,25 @@
       </a>
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="todo.html">Task Manager</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+
+      <!-- Light / dark mode switch: swaps CSS custom properties on <html> -->
+      <button type="button" class="theme-toggle" id="theme-toggle"
+        aria-label="Switch to light theme" aria-pressed="false" title="Toggle colour theme">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.5"></circle>
+          <path d="M12 1.5v2.5M12 20v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M1.5 12H4M20 12h2.5M4.2 19.8L6 18M18 6l1.8-1.8"></path>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"></path>
+        </svg>
+      </button>
     </nav>
   </header>
 
@@ -75,7 +91,7 @@
         Hi, I'm <strong>Gagana N M</strong>. I specialize in Artificial Intelligence, Machine Learning, Cyber Forensic Intelligence engines, and building accessible, high-performance web applications.
       </p>
       <div>
-        <a href="projects.html">Explore Projects</a>
+        <a href="project.html">Explore Projects</a>
         <a href="contact.html">Contact Me</a>
       </div>
     </section>
@@ -102,7 +118,7 @@
             <li>NLP / Security Intelligence</li>
           </ul>
           <footer>
-            <a href="projects.html#email-threat" aria-label="Read case study for Email Threat Detection Engine">Read Case Study</a>
+            <a href="project.html#email-threat" aria-label="Read case study for Email Threat Detection Engine">Read Case Study</a>
             <a href="https://github.com" rel="external noopener noreferrer" target="_blank" aria-label="View source code on GitHub (opens in a new tab)">GitHub Repository</a>
           </footer>
         </article>
@@ -124,14 +140,14 @@
             <li>Geospatial Calculations</li>
           </ul>
           <footer>
-            <a href="projects.html#krishigati" aria-label="Read case study for KrishiGati Platform">Read Case Study</a>
+            <a href="project.html#krishigati" aria-label="Read case study for KrishiGati Platform">Read Case Study</a>
             <a href="https://github.com" rel="external noopener noreferrer" target="_blank" aria-label="View source code on GitHub (opens in a new tab)">GitHub Repository</a>
           </footer>
         </article>
       </div>
-      
+
       <footer>
-        <a href="projects.html">View All Projects</a>
+        <a href="project.html">View All Projects</a>
       </footer>
     </section>
 
@@ -150,13 +166,18 @@
       </dl>
     </section>
 
-  </main>
+    <!--
+      Sidebar Landmark.
+      Deliberately nested inside <main> so it can participate in the page
+      grid's sidebar track. Grid items must be children of the grid container,
+      and <aside> stays a valid complementary landmark here regardless.
+    -->
+    <aside aria-label="Recent Highlights">
+      <h2>Hackathon Updates</h2>
+      <p>Participating as Team Leader in technical competitions including SIH 2026 and Quant-A-Maze 3.0.</p>
+    </aside>
 
-  <!-- Sidebar Landmark -->
-  <aside aria-label="Recent Highlights">
-    <h2>Hackathon Updates</h2>
-    <p>Participating as Team Leader in technical competitions including SIH 2026 and Quant-A-Maze 3.0.</p>
-  </aside>
+  </main>
 
   <!-- Footer Landmark -->
   <footer role="contentinfo">

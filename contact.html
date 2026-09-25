@@ -9,6 +9,7 @@
   <meta name="robots" content="index, follow">
 
   <link rel="canonical" href="https://www.gagananm.dev/contact.html">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -23,16 +24,31 @@
       </a>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="todo.html">Task Manager</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
+
+      <!-- Light / dark mode switch: swaps CSS custom properties on <html> -->
+      <button type="button" class="theme-toggle" id="theme-toggle"
+        aria-label="Switch to light theme" aria-pressed="false" title="Toggle colour theme">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.5"></circle>
+          <path d="M12 1.5v2.5M12 20v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M1.5 12H4M20 12h2.5M4.2 19.8L6 18M18 6l1.8-1.8"></path>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"></path>
+        </svg>
+      </button>
     </nav>
   </header>
 
   <!-- Main Content Landmark -->
   <main id="main-content" tabindex="-1">
-    
+
     <header>
       <h1>Contact Me</h1>
       <p>Use the form below to send a message regarding projects, hackathon collaborations, or inquiries.</p>
@@ -48,7 +64,7 @@
       <h2 id="form-heading">Send a Message</h2>
 
       <form action="/submit-contact" method="POST" novalidate>
-        
+
         <p><small>Fields marked with an asterisk (<span aria-hidden="true">*</span>) are required.</small></p>
 
         <!-- Name Input -->
@@ -56,12 +72,12 @@
           <label for="full-name">
             Full Name <span aria-hidden="true">*</span>
           </label>
-          <input 
-            type="text" 
-            id="full-name" 
-            name="name" 
-            required 
-            autocomplete="name" 
+          <input
+            type="text"
+            id="full-name"
+            name="name"
+            required
+            autocomplete="name"
             aria-required="true"
             aria-describedby="name-hint"
           >
@@ -73,12 +89,12 @@
           <label for="email-address">
             Email Address <span aria-hidden="true">*</span>
           </label>
-          <input 
-            type="email" 
-            id="email-address" 
-            name="email" 
-            required 
-            autocomplete="email" 
+          <input
+            type="email"
+            id="email-address"
+            name="email"
+            required
+            autocomplete="email"
             aria-required="true"
             aria-describedby="email-hint"
           >
@@ -103,12 +119,12 @@
           <label for="user-message">
             Your Message <span aria-hidden="true">*</span>
           </label>
-          <textarea 
-            id="user-message" 
-            name="message" 
-            rows="6" 
-            required 
-            aria-required="true" 
+          <textarea
+            id="user-message"
+            name="message"
+            rows="6"
+            required
+            aria-required="true"
             aria-describedby="message-hint"
           ></textarea>
           <span id="message-hint"><small>Include details regarding your project or inquiry.</small></span>
@@ -117,7 +133,7 @@
         <!-- Radio Group Fieldset -->
         <fieldset>
           <legend>Preferred Response Method</legend>
-          
+
           <div>
             <input type="radio" id="pref-email" name="preferred_contact" value="email" checked>
             <label for="pref-email">Email</label>
